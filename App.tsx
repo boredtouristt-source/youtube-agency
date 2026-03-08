@@ -7,6 +7,7 @@ import Work from './components/Sections/Work';
 import Philosophy from './components/Sections/Philosophy';
 import Process from './components/Sections/Process';
 import CTA from './components/Sections/CTA';
+import Team from './components/Sections/Team';
 import Footer from './components/Layout/Footer';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Services />
         <Process />
         <Work />
+        <Team />
         <CTA />
       </main>
       <Footer />

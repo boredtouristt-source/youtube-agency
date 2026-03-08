@@ -1,64 +1,128 @@
 import React from 'react';
-import { ArrowDown, ArrowRight } from 'lucide-react';
-import Reveal from '../UI/Reveal';
+import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative pt-32 pb-20 md:pt-48 min-h-screen flex flex-col justify-center overflow-hidden bg-white z-10">
-      
-      {/* Dynamic Background Marquees */}
-      <div className="absolute inset-0 flex flex-col justify-center gap-32 pointer-events-none select-none opacity-[0.03] -z-10 overflow-hidden">
-        <div className="animate-marquee whitespace-nowrap">
-            <span className="text-[20vh] font-display font-bold leading-none">STRATEGY EXECUTION GROWTH SYSTEM STRATEGY EXECUTION GROWTH SYSTEM</span>
-        </div>
-        <div className="animate-marquee2 whitespace-nowrap">
-            <span className="text-[20vh] font-display font-bold leading-none">CONSISTENCY SCALE RETENTION VIRALITY CONSISTENCY SCALE RETENTION VIRALITY</span>
-        </div>
+    <section className="relative w-full min-h-screen overflow-hidden bg-black flex flex-col">
+
+      {/* ── Background: drifting YouTube thumbnail mosaic ── */}
+      <div className="absolute inset-0 z-0 overflow-hidden bg-black">
+
+        {/* Thumbnail grid — rotated slightly for cinematic feel */}
+        {(() => {
+          const imgs = [
+            'https://cdn.prod.website-files.com/691e1ad634013b0c7bbacdf9/698e2db0d6106c9017b93176_CGC%20Facebook%20Banner.jpg',
+            'https://i.ytimg.com/vi/cd9or9hVpAw/maxresdefault.jpg',
+            'https://aliabdaal.com/wp-content/uploads/2025/01/ali-abdaal-author-feel-good-productivity-book.jpg',
+            '/betclic.avif',
+            '/chuff2.jpg',
+            '/fut2.jpg',
+          ];
+          const rows = [
+            { cls: 'thumb-row thumb-row-l1', order: [0,1,2,3,4,5] },
+            { cls: 'thumb-row thumb-row-r1', order: [3,5,1,2,0,4] },
+            { cls: 'thumb-row thumb-row-l2', order: [4,2,0,5,3,1] },
+            { cls: 'thumb-row thumb-row-r2', order: [1,4,3,0,5,2] },
+          ];
+          return (
+            <div className="absolute inset-0 flex flex-col justify-center gap-3" style={{ transform: 'rotate(-2deg) scale(1.15)', transformOrigin: 'center' }}>
+              {rows.map((row, ri) => (
+                <div key={ri} className={row.cls}>
+                  {[...row.order, ...row.order].map((idx, i) => (
+                    <img key={i} src={imgs[idx]}
+                      className="h-44 w-[290px] object-cover rounded-xl flex-shrink-0" alt="" />
+                  ))}
+                </div>
+              ))}
+            </div>
+          );
+        })()}
+
+        {/* Dark veil — makes thumbnails atmospheric, not distracting */}
+        <div className="absolute inset-0 bg-black/60" />
+
+        {/* Horizontal vignette — fades edges to black */}
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(90deg, black 0%, transparent 25%, transparent 75%, black 100%)' }} />
+        {/* Vertical vignette */}
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0.6) 0%, transparent 30%, transparent 70%, rgba(0,0,0,0.7) 100%)' }} />
+
+        {/* Brand colour blobs on top of thumbnails */}
+        <div className="absolute -top-40 -left-40 w-[700px] h-[700px] bg-[#f3fc46] rounded-full blur-[180px] opacity-[0.10]" />
+        <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-orange-600 rounded-full blur-[160px] opacity-[0.14]" />
+        <div className="absolute bottom-0 left-1/3 w-[500px] h-[400px] bg-red-900 rounded-full blur-[140px] opacity-[0.20]" />
+
+        {/* Subtle grid */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.2) 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
       </div>
-      
-      {/* Glowing Blob */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#f3fc46] rounded-full blur-[150px] opacity-20 -z-20"></div>
-      
-      <div className="container mx-auto px-6 md:px-12 text-center relative">
-         
-         <Reveal width="100%">
-            <div className="relative inline-block">
-                <span className="absolute -top-8 -right-8 -rotate-12 bg-black text-white px-4 py-1 rounded-full font-mono text-xs font-bold uppercase border-2 border-white shadow-xl z-20 hidden md:block">
-                    Accepting New Clients
-                </span>
-                <h1 className="text-6xl md:text-8xl lg:text-[9rem] xl:text-[10rem] font-display font-bold text-black leading-[0.9] tracking-tighter mb-8 md:mb-12">
-                WE TURN BRANDS<br />
-                <span className="inline-block bg-[#f3fc46] px-4 md:px-10 transform -skew-x-3 mt-2 pb-2">INTO ICONS.</span>
-                </h1>
-            </div>
-         </Reveal>
 
-         <Reveal delay={200} width="100%">
-            <p className="text-xl md:text-3xl text-zinc-600 font-medium max-w-4xl mx-auto mb-16 tracking-tight leading-snug">
-            We help creators, brands, and agencies turn ideas into consistent, high-performing content. <br className="hidden md:block"/> We build systems that scale.
+      {/* ── Navbar spacer ── */}
+      <div className="h-20 shrink-0" />
+
+      {/* ── Main content ── */}
+      <div className="relative z-10 flex-1 flex flex-col px-8 md:px-14 pb-10">
+
+        {/* Top row: logo large + services */}
+        <div className="flex-1 flex flex-col md:flex-row md:items-center justify-between gap-12 pt-12 md:pt-20">
+
+          {/* Brand + tagline */}
+          <div className="flex flex-col gap-8 max-w-2xl">
+            <h1 className="text-[13vw] md:text-[9vw] lg:text-[8vw] font-display font-bold text-white leading-[0.85] tracking-tighter">
+              NATIVE<span className="text-[#f3fc46]">.</span>
+            </h1>
+            <p className="text-white/50 text-base md:text-lg font-medium max-w-sm leading-relaxed">
+              Transformamos marcas em canais que as pessoas escolhem ver.
             </p>
-         </Reveal>
+          </div>
 
-         <Reveal delay={300}>
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-                <a 
-                href="#contact"
-                className="group relative px-12 py-6 bg-black text-white text-lg font-bold rounded-full overflow-hidden shadow-2xl transition-transform hover:scale-105"
-                >
-                    <div className="absolute inset-0 bg-[#f3fc46] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
-                    <span className="relative z-10 group-hover:text-black flex items-center gap-2">
-                        Book a Call <ArrowRight className="w-5 h-5" />
-                    </span>
-                </a>
-                <a 
-                href="#work"
-                className="group flex items-center gap-2 px-10 py-6 bg-white border-2 border-zinc-100 text-black font-bold rounded-full hover:border-black transition-all shadow-sm hover:shadow-xl"
-                >
-                View Work
-                <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
-                </a>
+          {/* Services list — top right */}
+          <div className="flex flex-col gap-3 md:text-right">
+            {[
+              'Direção Criativa',
+              'Edição',
+              'Estratégia de Conteúdo',
+              'Gestão de Marcas',
+            ].map((s) => (
+              <span
+                key={s}
+                className="text-white/70 text-lg md:text-xl font-display font-semibold tracking-tight hover:text-[#f3fc46] transition-colors cursor-default"
+              >
+                {s}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom row: tagline left + founder card right */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mt-auto pt-12">
+
+          {/* Bottom left copy */}
+          <p className="text-white/40 text-sm font-mono uppercase tracking-widest max-w-xs leading-relaxed">
+            © {new Date().getFullYear()} Native Creative Agency
+          </p>
+
+          {/* Founder card — bottom right */}
+          <div className="flex items-center gap-4 bg-white rounded-2xl p-3 pr-5 shadow-2xl w-fit">
+            <img
+              src="https://media.licdn.com/dms/image/v2/D4D03AQEFlMtC7gtzpw/profile-displayphoto-scale_200_200/B4DZolynQRGQAY-/0/1761570620869?e=1774483200&v=beta&t=bHFaiGa69H9UKJaPMBCmfHS2_ADOCphL6pWuBZjbAyg"
+              alt="Francisco"
+              className="w-14 h-14 rounded-xl object-cover flex-shrink-0"
+            />
+            <div className="flex flex-col gap-2">
+              <div>
+                <p className="text-zinc-400 text-xs font-medium">Co-Fundador da Native</p>
+                <p className="text-black font-display font-bold text-lg leading-tight">Francisco.</p>
+              </div>
+              <a
+                href="https://calendar.app.google/AETzZfN5aFjXbGj38"
+                target="_blank" rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-black text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-[#f3fc46] hover:text-black transition-colors"
+              >
+                Marcar uma Chamada <ArrowRight className="w-3 h-3" />
+              </a>
             </div>
-         </Reveal>
+          </div>
+
+        </div>
       </div>
     </section>
   );

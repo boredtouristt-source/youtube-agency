@@ -16,7 +16,7 @@ const WorkflowChat: React.FC = () => {
                  <span className="text-zinc-400 text-[10px]">10:42 AM</span>
               </div>
               <div className="bg-zinc-100 rounded-2xl rounded-tl-none p-3 text-zinc-700 text-sm leading-snug font-medium">
-                 The retention drop at 0:15 is hurting us. Can we remix the hook for Shorts?
+                 A queda de retenção aos 0:15 está a prejudicar-nos. Podemos fazer um remix do gancho para os Shorts?
               </div>
            </div>
         </div>
@@ -34,11 +34,11 @@ const WorkflowChat: React.FC = () => {
            </div>
            <div className="flex-1">
               <div className="flex justify-between items-baseline mb-1">
-                 <span className="text-black font-bold text-sm">Native Team</span>
+                 <span className="text-black font-bold text-sm">Equipa Native</span>
                  <span className="text-zinc-400 text-[10px]">10:55 AM</span>
               </div>
               <div className="bg-purple-50 rounded-2xl rounded-tl-none p-3 text-zinc-800 text-sm leading-snug mb-2 font-medium">
-                 Already analyzing. We'll cut a kinetic text loop to keep pacing high.
+                 Já a analisar. Vamos criar um loop de texto cinético para manter o ritmo elevado.
               </div>
               <div className="flex items-center gap-2 text-[10px] text-purple-700 font-mono uppercase bg-purple-100 px-2 py-1 rounded-full inline-block font-bold">
                  <Clock className="w-3 h-3" />

@@ -1,48 +1,72 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { NAVIGATION_LINKS } from '../../constants';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-zinc-100">
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      scrolled
+        ? 'bg-white/90 backdrop-blur-xl border-b border-zinc-100 shadow-sm'
+        : 'bg-transparent border-b border-transparent'
+    }`}>
       <div className="w-full px-6 md:px-12 h-20 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 bg-black text-white flex items-center justify-center font-bold font-display text-xl rounded-full group-hover:bg-[#f3fc46] group-hover:text-black transition-colors duration-300">
+          <div className={`w-8 h-8 flex items-center justify-center font-bold font-display text-xl rounded-full transition-colors duration-300 ${
+              scrolled
+                ? 'bg-black text-white group-hover:bg-[#f3fc46] group-hover:text-black'
+                : 'bg-white text-black group-hover:bg-[#f3fc46]'
+            }`}>
             N
           </div>
-          <span className="text-xl font-bold tracking-tight font-display text-black">
+          <span className={`text-xl font-bold tracking-tight font-display transition-colors duration-300 ${scrolled ? 'text-black' : 'text-white'}`}>
             NATIVE<span className="text-[#f3fc46] drop-shadow-sm">.</span>
           </span>
         </a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
-          <div className="flex gap-8 bg-zinc-100 px-8 py-3 rounded-full">
+          <div className={`flex gap-8 px-8 py-3 rounded-full transition-all duration-300 ${
+              scrolled ? 'bg-zinc-100' : 'bg-white/10 backdrop-blur-md'
+            }`}>
             {NAVIGATION_LINKS.map((link) => (
               <a 
                 key={link.name} 
                 href={link.href}
-                className="text-sm font-medium text-zinc-500 hover:text-black transition-colors"
+                className={`text-sm font-medium transition-colors ${
+                    scrolled ? 'text-zinc-500 hover:text-black' : 'text-white/70 hover:text-white'
+                  }`}
               >
                 {link.name}
               </a>
             ))}
           </div>
-          <a 
-            href="#contact"
-            className="flex items-center gap-2 px-6 py-3 bg-black text-white text-sm font-bold rounded-full hover:bg-[#f3fc46] hover:text-black transition-colors shadow-lg shadow-black/10"
+          <a
+            href="https://calendar.app.google/AETzZfN5aFjXbGj38"
+            target="_blank" rel="noopener noreferrer"
+            className={`flex items-center gap-2 px-6 py-3 text-sm font-bold rounded-full transition-all duration-300 shadow-lg ${
+              scrolled
+                ? 'bg-black text-white hover:bg-[#f3fc46] hover:text-black shadow-black/10'
+                : 'bg-white text-black hover:bg-[#f3fc46] shadow-black/20'
+            }`}
           >
-            Book a Call
+            Marcar uma Chamada
           </a>
         </div>
 
         {/* Mobile Toggle */}
         <button 
           onClick={() => setIsOpen(!isOpen)} 
-          className="md:hidden z-50 text-black p-2"
+          className={`md:hidden z-50 p-2 transition-colors ${scrolled || isOpen ? 'text-black' : 'text-white'}`}
         >
           {isOpen ? <X /> : <Menu />}
         </button>
@@ -61,11 +85,12 @@ const Navbar: React.FC = () => {
               </a>
             ))}
             <a 
-              href="#contact"
+              href="https://calendar.app.google/AETzZfN5aFjXbGj38"
+              target="_blank" rel="noopener noreferrer"
               onClick={() => setIsOpen(false)}
               className="mt-8 px-8 py-4 bg-black text-white rounded-full font-bold text-lg"
             >
-              Book a Call
+              Marcar uma Chamada
             </a>
           </div>
         )}

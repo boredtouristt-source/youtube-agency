@@ -16,11 +16,11 @@ const Services: React.FC = () => {
         <div className="mb-24">
           <Reveal width="100%">
             <h2 className="text-5xl md:text-8xl font-display font-bold tracking-tighter leading-[0.9] mb-8">
-              OUR <br />
-              <span className="text-[#f3fc46]">APPROACH.</span>
+              A NOSSA <br />
+              <span className="text-[#f3fc46]">ABORDAGEM.</span>
             </h2>
             <p className="text-zinc-400 text-xl md:text-2xl max-w-3xl leading-relaxed">
-              We partner up as both an editing team and creative direction layer. We don't just ask "What do you want edited?" We ask "How does this support growth?"
+              Somos simultaneamente equipa de edição e camada de direção criativa. Não perguntamos apenas "O que quer editar?" Perguntamos "Como é que isto apoia o crescimento?"
             </p>
           </Reveal>
         </div>
@@ -57,7 +57,7 @@ const Services: React.FC = () => {
                         {/* Image Display */}
                         <img 
                             key={activeService.id}
-                            src={`https://picsum.photos/seed/${activeService.id}native/800/800`} 
+                            src={activeService.image} 
                             alt={activeService.title} 
                             className="w-full h-full object-cover opacity-60 animate-in fade-in zoom-in duration-500"
                         />
@@ -65,7 +65,7 @@ const Services: React.FC = () => {
                         {/* Overlay Information */}
                         <div className="absolute inset-0 flex flex-col justify-end p-12 bg-gradient-to-t from-black via-black/50 to-transparent">
                             <div className="bg-[#f3fc46] text-black self-start px-4 py-1 rounded-full font-bold text-xs uppercase tracking-wide mb-4 shadow-lg">
-                                Active Approach
+                                Abordagem Ativa
                             </div>
                             <h4 className="text-4xl font-display font-bold text-white mb-4">
                                 {activeService.title}

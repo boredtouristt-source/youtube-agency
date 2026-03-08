@@ -103,6 +103,21 @@
       .delay-400 { transition-delay: 400ms; }
       .delay-500 { transition-delay: 500ms; }
 
+      /* Thumbnail mosaic scroll animations */
+      @keyframes thumb-left {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      @keyframes thumb-right {
+        0%   { transform: translateX(-50%); }
+        100% { transform: translateX(0); }
+      }
+      .thumb-row { display: flex; gap: 12px; width: max-content; will-change: transform; }
+      .thumb-row-l1 { animation: thumb-left  70s linear infinite; }
+      .thumb-row-r1 { animation: thumb-right 55s linear infinite; }
+      .thumb-row-l2 { animation: thumb-left  85s linear infinite; }
+      .thumb-row-r2 { animation: thumb-right 65s linear infinite; }
+
     </style>
   <script type="importmap">
 {
@@ -118,5 +133,6 @@
   <body>
     <div id="root"></div>
     <div class="grain-overlay"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>

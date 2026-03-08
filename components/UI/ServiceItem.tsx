@@ -7,9 +7,10 @@ interface ServiceItemProps {
   description: string;
   tags: string[];
   isLast: boolean;
+  image: string;
 }
 
-const ServiceItem: React.FC<ServiceItemProps> = ({ id, title, description, tags, isLast }) => {
+const ServiceItem: React.FC<ServiceItemProps> = ({ id, title, description, tags, isLast, image }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -40,7 +41,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ id, title, description, tags,
             <div className="md:col-span-3">
                <div className="w-32 h-20 rounded-lg overflow-hidden relative border border-zinc-200 shadow-sm">
                   <img 
-                    src={`https://picsum.photos/seed/${id}/300/200`} 
+                    src={image} 
                     alt="Service visual" 
                     className="w-full h-full object-cover grayscale opacity-80"
                   />

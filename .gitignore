@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Videos (too large for GitHub)
+Videos/
+public/videos/

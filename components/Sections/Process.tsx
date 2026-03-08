@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { PROCESS_STEPS } from '../../constants';
 import Reveal from '../UI/Reveal';
-import { Flag } from 'lucide-react';
+
 
 const Process: React.FC = () => {
   const [startLineAnimation, setStartLineAnimation] = useState(false);
@@ -30,11 +30,11 @@ const Process: React.FC = () => {
             <Reveal width="100%">
                 <div className="inline-block relative">
                     <h2 className="text-6xl md:text-9xl font-display font-bold text-black tracking-tighter leading-[0.9] mb-4 relative z-10">
-                    IDEA TO <br /><span className="text-black bg-[#f3fc46] px-6 transform -skew-x-6 inline-block">GROWTH.</span>
+                    DA IDEIA AO <br /><span className="text-black bg-[#f3fc46] px-6 transform -skew-x-6 inline-block">CRESCIMENTO.</span>
                     </h2>
                 </div>
                 <p className="text-zinc-500 text-lg md:text-2xl font-medium max-w-2xl mx-auto mt-8">
-                    Build structured content systems that scale across platforms, formats, and audiences.
+                    Um processo construído para transformar qualquer marca numa presença real no YouTube.
                 </p>
             </Reveal>
         </div>
@@ -46,7 +46,7 @@ const Process: React.FC = () => {
             <div className="absolute inset-0 w-full h-full pointer-events-none">
                 <svg className="w-full h-full visible" preserveAspectRatio="none" viewBox="0 0 1200 350">
                     <defs>
-                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <linearGradient id="gradient" x1="150" y1="0" x2="1050" y2="0" gradientUnits="userSpaceOnUse">
                         <stop offset="0%" stopColor="#e4e4e7" />
                         <stop offset="100%" stopColor="#f3fc46" />
                         </linearGradient>
@@ -105,12 +105,7 @@ const Process: React.FC = () => {
                     </Reveal>
                 )})}
                 
-                 {/* Finish Line Flag - Appears last */}
-                 <Reveal delay={1600} className="absolute right-[8%] bottom-[30px] z-10">
-                    <div className="animate-bounce">
-                        <Flag className="w-8 h-8 text-black fill-[#f3fc46]" />
-                    </div>
-                 </Reveal>
+
             </div>
         </div>
 

@@ -1,132 +1,143 @@
 import { MonitorPlay, Lightbulb, BarChart3, Layers, Zap, Globe, Users, TrendingUp, Video, Share2, Image, Repeat } from "lucide-react";
 
 export const NAVIGATION_LINKS = [
-  { name: "The Struggle", href: "#why-us" },
-  { name: "Approach", href: "#services" },
-  { name: "Work", href: "#work" },
+  { name: "O Desafio", href: "#why-us" },
+  { name: "Abordagem", href: "#services" },
+  { name: "Trabalho", href: "#work" },
+  { name: "Equipa", href: "#team" },
 ];
 
 export const CLIENT_LOGOS = [
-  { name: "Ali Abdaal", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/ali%20abdaal.jpg" },
-  { name: "Chuff", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/chuff.jpg" },
-  { name: "Futcrunch", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/futcrunch.jpg" },
-  { name: "Harrison", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/harrison.jpg" },
-  { name: "Jessers", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/jessers.webp" },
-  { name: "Revolut", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/revolut%20circle.webp" },
-  { name: "Seek Discomfort", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/seek%20discomfort.webp" },
-  { name: "Surfshark", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/surfshark.webp" },
-  { name: "The Marketing Friends", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/the%20marketing%20friends.jpeg" },
-  { name: "Trip", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/trip.png" },
-  { name: "V1", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/v1.png" },
+  { name: "Ali Abdaal", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/ali%20abdaal.jpg", link: "https://www.youtube.com/@aliabdaal" },
+  { name: "Chuff", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/chuff.jpg", link: "https://www.youtube.com/@Chuffsters" },
+  { name: "Futcrunch", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/futcrunch.jpg", link: "https://www.youtube.com/@Futcrunch" },
+  { name: "Harrison", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/harrison.jpg", link: "https://www.youtube.com/@HarrisonNevel" },
+  { name: "Jessers", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/jessers.webp", link: "https://www.youtube.com/@Jesser" },
+  { name: "Revolut", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/revolut%20circle.webp", link: "https://www.revolut.com" },
+  { name: "Seek Discomfort", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/seek%20discomfort.webp", link: "https://www.youtube.com/@YesTheory" },
+  { name: "Surfshark", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/surfshark.webp", link: "https://surfshark.com" },
+  { name: "The Marketing Friends", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/the%20marketing%20friends.jpeg", link: "https://www.youtube.com/@themarketingfriends" },
+  { name: "Trip", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/trip.png", link: "https://www.trip.com" },
+  { name: "V1", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/v1.png", link: "https://www.v1sports.com" },
 ];
 
 export const PORTFOLIO_ITEMS = [
   {
     id: 1,
-    title: "Casey Neistat",
-    category: "Viral Storytelling",
-    views: "9M+ Subs",
-    image: "https://picsum.photos/id/338/1080/1920", 
-    client: "Creator",
-    stat: "22M+ Views",
-    link: "https://www.youtube.com/watch?v=jG7dSXcfVqE" // Example link
+    title: "Creator Golf Club",
+    category: "Marca Própria",
+    views: "Viral",
+    image: "https://picsum.photos/id/338/1080/1920",
+    video: "/videos/IMG_3114_3.mp4",
+    client: "Creator Golf Club",
+    stat: "Marca criada pelos maiores criadores de golfe do mundo.",
+    link: "https://www.creatorgolfclub.com"
   },
   {
     id: 2,
-    title: "MrBeast Gaming",
-    category: "Retention Editing",
-    views: "Viral Hit",
-    image: "https://picsum.photos/id/1060/1080/1920", 
-    client: "Entertainment",
-    stat: "#1 Trending",
-    link: "https://www.youtube.com/watch?v=0e3GPea1Tyg" // Example link
+    title: "Yes Theory",
+    category: "Documentário",
+    views: "10M Subscritores",
+    image: "https://picsum.photos/id/870/1080/1920",
+    video: "/videos/yestheory.mp4",
+    client: "Yes Theory",
+    stat: "Trabalho realizado para a Seek Discomfort, marca dos Yes Theory — canal com mais de 10 milhões de subscritores.",
+    link: "https://www.youtube.com/@YesTheory"
   },
   {
     id: 3,
-    title: "Yes Theory",
-    category: "Documentary",
-    views: "9M+ Subs",
-    image: "https://picsum.photos/id/870/1080/1920", 
-    client: "Travel",
-    stat: "Doc of the Year",
-    link: "https://www.youtube.com/watch?v=okz5RIZq0tI" // Example link
+    title: "Ali Abdaal",
+    category: "Educação & Produtividade",
+    views: "6M Subscritores",
+    image: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/ali%20abdaal.jpg",
+    video: "/videos/ali.mp4",
+    client: "Ali Abdaal",
+    stat: "Vários conteúdos produzidos para as marcas parceiras de Ali Abdaal, criador com mais de 6 milhões de subscritores.",
+    link: "https://www.youtube.com/@aliabdaal"
   },
   {
     id: 4,
-    title: "Nike x Skepta",
-    category: "Commercial",
-    views: "Ad Campaign",
-    image: "https://picsum.photos/id/445/1080/1920", 
-    client: "Brand",
-    stat: "3.5% CTR",
-    link: "https://www.youtube.com/watch?v=gAk7aX5hksU" 
+    title: "Chuffsters",
+    category: "Entretenimento",
+    views: "1M Subscritores",
+    image: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/chuff.jpg",
+    video: "/videos/chuff.mp4",
+    client: "Chuffsters",
+    stat: "Produção de conteúdos para o Chuffsters, criador com 1 milhão de subscritores.",
+    link: "https://www.youtube.com/@Chuffsters"
   }
 ];
 
 export const SERVICES_DATA = [
   {
     id: "01",
-    title: "Creative Direction",
-    description: "We shape content before it reaches the timeline. We refine structure, pacing, and flow for maximum performance.",
-    tags: ["Structure", "Pacing"],
-    icon: Lightbulb
+    title: "Direção Criativa",
+    description: "Antes de gravar um único segundo, definimos o que é que vai fazer a audiência sentir. O tema, o ritmo, a forma como a história é contada porque um vídeo bem editado com a ideia errada não chega a lado nenhum.",
+    tags: ["Estrutura", "Ritmo"],
+    icon: Lightbulb,
+    image: "https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?w=1280&q=80"
   },
   {
     id: "02",
-    title: "Consistency System",
-    description: "We protect visual and editorial consistency across videos, formats, and brands, ensuring a cohesive identity.",
-    tags: ["Identity", "Brand Safe"],
-    icon: Repeat
+    title: "Identidade da Marca",
+    description: "Analisamos o teu perfil a fundo para garantir que cada vídeo parece inconfundivelmente teu.",
+    tags: ["Identidade", "Marca Segura"],
+    icon: Repeat,
+    image: "https://images.unsplash.com/photo-1539635278303-d4002c07eae3?w=1280&q=80"
   },
   {
     id: "03",
-    title: "Retention Editing",
-    description: "Engineered for watch time. We don't just edit; we engineer the viewer journey to keep them hooked.",
-    tags: ["Editing", "Retention"],
-    icon: Layers
+    title: "Edição de Retenção",
+    description: "Não nos limitamos a editar.. desenhamos a jornada do espectador para o manter envolvido ao longo de todo o vídeo.",
+    tags: ["Edição", "Retenção"],
+    icon: Layers,
+    image: "/editing.jpg"
   },
   {
     id: "04",
-    title: "Short-Form Amp",
-    description: "Turning one idea into multiple touchpoints. We extend core content into Shorts and Reels for maximum reach.",
-    tags: ["Repurposing", "Vertical"],
-    icon: Share2
+    title: "Amplificação Short-Form",
+    description: "Transformamos uma ideia em múltiplos formatos para o máximo alcance.",
+    tags: ["Reutilização", "Vertical"],
+    icon: Share2,
+    image: "/short.webp"
   },
   {
     id: "05",
-    title: "Thumbnail Strategy",
-    description: "Click-worthy packaging that cuts through the noise and supports the broader distribution strategy.",
+    title: "Estratégia de Thumbnails",
+    description: "Packaging apelativo ao clique que se destaca no ruído e apoia a estratégia de distribuição mais ampla.",
     tags: ["CTR", "Packaging"],
-    icon: Image
+    icon: Image,
+    image: "/thomas.webp"
   },
   {
     id: "06",
-    title: "Strategic Consulting",
-    description: "We advise on publishing consistency, formats, and performance-driven decisions grounded in platform data.",
-    tags: ["Growth", "Advisory"],
-    icon: Users
+    title: "Consultoria Estratégica",
+    description: "Orientamos sobre consistência de publicação, formatos e decisões assentes em dados de plataforma para impulsionar o crescimento.",
+    tags: ["Crescimento", "Consultoria"],
+    icon: Users,
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1280&q=80"
   }
 ];
 
 export const PROCESS_STEPS = [
   {
     number: "01",
-    title: "Strategy",
-    description: "Ideation & Roadmap"
+    title: "Estratégia",
+    description: "Ideação & Roadmap"
   },
   {
     number: "02",
-    title: "Execution",
-    description: "Production & Direction"
+    title: "Execução",
+    description: "Produção & Direção"
   },
   {
     number: "03",
-    title: "Amplification",
-    description: "Distribution & Shorts"
+    title: "Amplificação",
+    description: "Distribuição & Shorts"
   },
   {
     number: "04",
-    title: "Growth",
-    description: "Scale & Optimize"
+    title: "Crescimento",
+    description: "Expandir & Optimizar"
   }
 ];
