@@ -28,7 +28,7 @@ export const PORTFOLIO_ITEMS = [
     category: "Marca Própria",
     views: "Viral",
     image: "https://picsum.photos/id/338/1080/1920",
-    video: "/videos/IMG_3114_3.mp4",
+    video: "https://storage.googleapis.com/bored_tourist_media/videos_off/IMG_3114_3.mp4",
     client: "Creator Golf Club",
     stat: "Marca criada pelos maiores criadores de golfe do mundo.",
     link: "https://www.creatorgolfclub.com"
@@ -39,7 +39,7 @@ export const PORTFOLIO_ITEMS = [
     category: "Documentário",
     views: "10M Subscritores",
     image: "https://picsum.photos/id/870/1080/1920",
-    video: "/videos/yestheory.mp4",
+    video: "https://storage.googleapis.com/bored_tourist_media/videos_off/yestheory.mp4",
     client: "Yes Theory",
     stat: "Trabalho realizado para a Seek Discomfort, marca dos Yes Theory — canal com mais de 10 milhões de subscritores.",
     link: "https://www.youtube.com/@YesTheory"
@@ -50,7 +50,7 @@ export const PORTFOLIO_ITEMS = [
     category: "Educação & Produtividade",
     views: "6M Subscritores",
     image: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/ali%20abdaal.jpg",
-    video: "/videos/ali.mp4",
+    video: "https://storage.googleapis.com/bored_tourist_media/videos_off/ali.mp4",
     client: "Ali Abdaal",
     stat: "Vários conteúdos produzidos para as marcas parceiras de Ali Abdaal, criador com mais de 6 milhões de subscritores.",
     link: "https://www.youtube.com/@aliabdaal"
@@ -61,7 +61,7 @@ export const PORTFOLIO_ITEMS = [
     category: "Entretenimento",
     views: "1M Subscritores",
     image: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/chuff.jpg",
-    video: "/videos/chuff.mp4",
+    video: "https://storage.googleapis.com/bored_tourist_media/videos_off/chuff.mp4",
     client: "Chuffsters",
     stat: "Produção de conteúdos para o Chuffsters, criador com 1 milhão de subscritores.",
     link: "https://www.youtube.com/@Chuffsters"
