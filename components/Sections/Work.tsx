@@ -18,7 +18,47 @@ const Work: React.FC = () => {
             </Reveal>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
+        {/* Mobile: horizontal snap scroll */}
+        <div className="flex lg:hidden gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6 scrollbar-hide">
+          {PORTFOLIO_ITEMS.map((item) => (
+            <a
+              key={item.id}
+              href={item.link || '#'}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="snap-center flex-shrink-0 w-[75vw] block group relative"
+            >
+              <div className="relative aspect-[9/16] bg-black rounded-[2.5rem] overflow-hidden shadow-2xl ring-1 ring-zinc-100">
+                {item.video ? (
+                  <video src={item.video} autoPlay muted loop playsInline preload="auto" poster={item.image}
+                    className="w-full h-full object-cover opacity-90" />
+                ) : (
+                  <img src={item.image} alt={item.title} className="w-full h-full object-cover opacity-90" />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/95"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 p-5 z-20">
+                  <div className="inline-flex items-center gap-2 bg-[#f3fc46] text-black px-3 py-1.5 rounded-full shadow-lg mb-4">
+                    <span className="text-xs font-bold uppercase tracking-wide">{item.client}</span>
+                  </div>
+                  {item.results && (
+                    <div className="flex flex-col gap-2">
+                      {item.results.map((r: { value: string; label: string }) => (
+                        <div key={r.label} className="flex items-baseline gap-2">
+                          <span className="text-white font-display font-bold text-xl leading-none">{r.value}</span>
+                          <span className="text-white/60 text-[11px] font-medium uppercase tracking-wide">{r.label}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        {/* Desktop: grid */}
+        <div className="hidden lg:grid grid-cols-4 gap-6">
           {PORTFOLIO_ITEMS.map((item, index) => {
             // Calculate a valid delay (100, 200, 300, 400)
             const delay = ((index % 4) + 1) * 100 as 100 | 200 | 300 | 400;

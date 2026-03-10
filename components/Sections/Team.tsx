@@ -65,7 +65,9 @@ const Team: React.FC = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                    className={`w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 ${
+                      member.name === 'João Garcia' ? 'scale-125 object-top' : ''
+                    }`}
                   />
                   {/* Overlay with initial fallback */}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
