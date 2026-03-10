@@ -18,7 +18,7 @@ export const CLIENT_LOGOS = [
   { name: "Surfshark", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/surfshark.webp", link: "https://surfshark.com" },
   { name: "The Marketing Friends", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/the%20marketing%20friends.jpeg", link: "https://www.themarketingfriends.com/" },
   { name: "Trip", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/trip.png", link: "https://www.tryp.com" },
-  { name: "Creator Golf Club", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/creator%20golf%20club.png", link: "https://www.creatorgolfclub.com/" },
+  { name: "Creator Golf Club", url: "https://cdn.prod.website-files.com/691e1ad634013b0c7bbacdf9/6920765c17a16bd34ac9e976_cgc-webclip.png", link: "https://www.creatorgolfclub.com/" },
 ];
 
 export const PORTFOLIO_ITEMS = [
