@@ -18,7 +18,7 @@ const Work: React.FC = () => {
             </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
           {PORTFOLIO_ITEMS.map((item, index) => {
             // Calculate a valid delay (100, 200, 300, 400)
             const delay = ((index % 4) + 1) * 100 as 100 | 200 | 300 | 400;
@@ -28,7 +28,7 @@ const Work: React.FC = () => {
                     key={item.id} 
                     delay={delay} 
                     width="100%"
-                    className={`w-full ${index % 2 !== 0 ? 'md:mt-12' : ''}`}
+                    className={`w-full ${index % 2 !== 0 ? 'lg:mt-12' : ''}`}
                 >
                     <a 
                         href={item.link || '#'} 
@@ -66,16 +66,24 @@ const Work: React.FC = () => {
                         )}
                         
                         {/* Gradient Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80"></div>
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/95"></div>
+                        <div className="absolute bottom-0 left-0 right-0 h-2/3 bg-gradient-to-t from-black via-black/80 to-transparent"></div>
 
-                        {/* Bottom: título + nome do criador */}
+                        {/* Bottom: cliente + resultados */}
                         <div className="absolute bottom-0 left-0 right-0 p-5 z-20">
-                            <div className="inline-flex items-center gap-2 bg-[#f3fc46] text-black px-3 py-1.5 rounded-full shadow-lg mb-2">
+                            <div className="inline-flex items-center gap-2 bg-[#f3fc46] text-black px-3 py-1.5 rounded-full shadow-lg mb-4">
                                 <span className="text-xs font-bold uppercase tracking-wide">{item.client}</span>
                             </div>
-                            <p className="text-white text-xs font-medium leading-snug drop-shadow-md opacity-90">
-                                {item.stat}
-                            </p>
+                            {item.results && (
+                              <div className="flex flex-col gap-2">
+                                {item.results.map((r: { value: string; label: string }) => (
+                                  <div key={r.label} className="flex items-baseline gap-2">
+                                    <span className="text-white font-display font-bold text-xl leading-none">{r.value}</span>
+                                    <span className="text-white/60 text-[11px] font-medium uppercase tracking-wide">{r.label}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            )}
                         </div>
 
                         {/* Play Button Overlay */}

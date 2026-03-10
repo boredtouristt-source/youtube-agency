@@ -16,9 +16,10 @@ export const CLIENT_LOGOS = [
   { name: "Revolut", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/revolut%20circle.webp", link: "https://www.revolut.com" },
   { name: "Seek Discomfort", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/seek%20discomfort.webp", link: "https://www.youtube.com/@YesTheory" },
   { name: "Surfshark", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/surfshark.webp", link: "https://surfshark.com" },
-  { name: "The Marketing Friends", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/the%20marketing%20friends.jpeg", link: "https://www.youtube.com/@themarketingfriends" },
-  { name: "Trip", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/trip.png", link: "https://www.trip.com" },
+  { name: "The Marketing Friends", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/the%20marketing%20friends.jpeg", link: "https://www.themarketingfriends.com/" },
+  { name: "Trip", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/trip.png", link: "https://www.tryp.com" },
   { name: "V1", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/v1.png", link: "https://www.v1sports.com" },
+  { name: "Creator Golf Club", url: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/creator%20golf%20club.png", link: "https://www.creatorgolfclub.com/" },
 ];
 
 export const PORTFOLIO_ITEMS = [
@@ -31,29 +32,44 @@ export const PORTFOLIO_ITEMS = [
     video: "https://storage.googleapis.com/bored_tourist_media/videos_off/IMG_3114_3.mp4",
     client: "Creator Golf Club",
     stat: "Marca criada pelos maiores criadores de golfe do mundo.",
-    link: "https://www.creatorgolfclub.com"
+    link: "https://www.creatorgolfclub.com",
+    results: [
+      { value: "+50M", label: "Subscritores combinados" },
+      { value: "+8M", label: "Visualizações" },
+      { value: "#1", label: "Golf no YouTube" },
+    ]
   },
   {
     id: 2,
     title: "Yes Theory",
-    category: "Documentário",
+    category: "Seek Discomfort",
     views: "10M Subscritores",
     image: "https://picsum.photos/id/870/1080/1920",
     video: "https://storage.googleapis.com/bored_tourist_media/videos_off/yestheory.mp4",
     client: "Yes Theory",
-    stat: "Trabalho realizado para a Seek Discomfort, marca dos Yes Theory — canal com mais de 10 milhões de subscritores.",
-    link: "https://www.youtube.com/@YesTheory"
+    stat: "Conteúdo produzido para a Seek Discomfort, marca dos Yes Theory.",
+    link: "https://www.youtube.com/@YesTheory",
+    results: [
+      { value: "+10M", label: "Subscritores" },
+      { value: "+4B", label: "Visualizações totais" },
+      { value: "+300M", label: "Impressões" },
+    ]
   },
   {
     id: 3,
     title: "Ali Abdaal",
-    category: "Educação & Produtividade",
+    category: "Educação & Negócios",
     views: "6M Subscritores",
     image: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/ali%20abdaal.jpg",
     video: "https://storage.googleapis.com/bored_tourist_media/videos_off/ali.mp4",
     client: "Ali Abdaal",
-    stat: "Vários conteúdos produzidos para as marcas parceiras de Ali Abdaal, criador com mais de 6 milhões de subscritores.",
-    link: "https://www.youtube.com/@aliabdaal"
+    stat: "Empreendedor com múltiplos negócios, best-seller do NYT e o maior criador de produtividade do mundo.",
+    link: "https://www.youtube.com/@aliabdaal",
+    results: [
+      { value: "+6M", label: "Subscritores" },
+      { value: "+500M", label: "Visualizações" },
+      { value: "+15M", label: "Impressões/mês" },
+    ]
   },
   {
     id: 4,
@@ -63,8 +79,13 @@ export const PORTFOLIO_ITEMS = [
     image: "https://storage.googleapis.com/bored_tourist_media/Images_Brands/chuff.jpg",
     video: "https://storage.googleapis.com/bored_tourist_media/videos_off/chuff.mp4",
     client: "Chuffsters",
-    stat: "Produção de conteúdos para o Chuffsters, criador com 1 milhão de subscritores.",
-    link: "https://www.youtube.com/@Chuffsters"
+    stat: "Produção de conteúdo para os 4 canais do Chuffsters.",
+    link: "https://www.youtube.com/@Chuffsters",
+    results: [
+      { value: "+100M", label: "Views geradas" },
+      { value: "4", label: "Canais geridos" },
+      { value: "+1M", label: "Subscritores" },
+    ]
   }
 ];
 

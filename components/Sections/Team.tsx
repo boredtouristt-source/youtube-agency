@@ -3,7 +3,7 @@ import Reveal from '../UI/Reveal';
 
 const TEAM = [
   {
-    name: "Francisco",
+    name: "Francisco Albuquerque",
     role: "Co-Fundador",
     description: "Visão estratégica e direção criativa. Co-criador do projecto Andamente, com mais de 300 mil seguidores nas redes sociais.",
     image: "https://media.licdn.com/dms/image/v2/D4D03AQEFlMtC7gtzpw/profile-displayphoto-scale_200_200/B4DZolynQRGQAY-/0/1761570620869?e=1774483200&v=beta&t=bHFaiGa69H9UKJaPMBCmfHS2_ADOCphL6pWuBZjbAyg",
@@ -31,7 +31,7 @@ const TEAM = [
     initial: "JR",
   },
   {
-    name: "Raquel",
+    name: "Raquel Nogueira",
     role: "Marketing",
     description: "A mente por detrás da distribuição e do crescimento orgânico.",
     image: "https://media.licdn.com/dms/image/v2/D4D03AQHzD0fWAhU1zw/profile-displayphoto-shrink_200_200/B4DZWrbapBH4AY-/0/1742337846826?e=1774483200&v=beta&t=pTeOt2isxTCWzD_kjcwqZ_gQfSgSQiyZstCLBL4gA84",
@@ -46,7 +46,7 @@ const Team: React.FC = () => {
 
         <Reveal width="100%">
           <div className="mb-20">
-            <h2 className="text-6xl md:text-8xl font-display font-bold text-black tracking-tighter leading-[0.9] mb-6">
+            <h2 className="text-4xl md:text-8xl font-display font-bold text-black tracking-tighter leading-[0.9] mb-6">
               A NOSSA<br />
               <span className="inline-block bg-[#f3fc46] px-4 transform -skew-x-3 pb-1">EQUIPA.</span>
             </h2>

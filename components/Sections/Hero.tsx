@@ -14,15 +14,17 @@ const Hero: React.FC = () => {
             'https://cdn.prod.website-files.com/691e1ad634013b0c7bbacdf9/698e2db0d6106c9017b93176_CGC%20Facebook%20Banner.jpg',
             'https://i.ytimg.com/vi/cd9or9hVpAw/maxresdefault.jpg',
             'https://aliabdaal.com/wp-content/uploads/2025/01/ali-abdaal-author-feel-good-productivity-book.jpg',
-            '/betclic.avif',
+            '/1.png',
             '/chuff2.jpg',
             '/fut2.jpg',
+            '/2.png',
+            '/3.png',
           ];
           const rows = [
-            { cls: 'thumb-row thumb-row-l1', order: [0,1,2,3,4,5] },
-            { cls: 'thumb-row thumb-row-r1', order: [3,5,1,2,0,4] },
-            { cls: 'thumb-row thumb-row-l2', order: [4,2,0,5,3,1] },
-            { cls: 'thumb-row thumb-row-r2', order: [1,4,3,0,5,2] },
+            { cls: 'thumb-row thumb-row-l1', order: [0,1,2,3,4,5,6,7] },
+            { cls: 'thumb-row thumb-row-r1', order: [3,6,1,2,7,4,0,5] },
+            { cls: 'thumb-row thumb-row-l2', order: [4,2,7,5,3,1,6,0] },
+            { cls: 'thumb-row thumb-row-r2', order: [1,4,3,6,5,7,0,2] },
           ];
           return (
             <div className="absolute inset-0 flex flex-col justify-center gap-3" style={{ transform: 'rotate(-2deg) scale(1.15)', transformOrigin: 'center' }}>
@@ -62,20 +64,20 @@ const Hero: React.FC = () => {
       <div className="relative z-10 flex-1 flex flex-col px-8 md:px-14 pb-10">
 
         {/* Top row: logo large + services */}
-        <div className="flex-1 flex flex-col md:flex-row md:items-center justify-between gap-12 pt-12 md:pt-20">
+        <div className="flex-1 flex flex-col md:flex-row md:items-center justify-between gap-8 pt-10 md:pt-20">
 
           {/* Brand + tagline */}
-          <div className="flex flex-col gap-8 max-w-2xl">
-            <h1 className="text-[13vw] md:text-[9vw] lg:text-[8vw] font-display font-bold text-white leading-[0.85] tracking-tighter">
+          <div className="flex flex-col gap-6 max-w-2xl">
+            <h1 className="text-[18vw] md:text-[9vw] lg:text-[8vw] font-display font-bold text-white leading-[0.85] tracking-tighter">
               NATIVE<span className="text-[#f3fc46]">.</span>
             </h1>
-            <p className="text-white/50 text-base md:text-lg font-medium max-w-sm leading-relaxed">
-              Transformamos marcas em canais que as pessoas escolhem ver.
+            <p className="text-white/50 text-sm md:text-lg font-medium max-w-sm leading-relaxed">
+              Transformamos o YouTube num canal estratégico para marcas.
             </p>
           </div>
 
-          {/* Services list — top right */}
-          <div className="flex flex-col gap-3 md:text-right">
+          {/* Services list — hidden on mobile */}
+          <div className="hidden md:flex flex-col gap-3 md:text-right">
             {[
               'Direção Criativa',
               'Edição',
@@ -93,15 +95,15 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Bottom row: tagline left + founder card right */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mt-auto pt-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mt-auto pt-8">
 
-          {/* Bottom left copy */}
-          <p className="text-white/40 text-sm font-mono uppercase tracking-widest max-w-xs leading-relaxed">
+          {/* Bottom left copy — hidden on mobile */}
+          <p className="hidden md:block text-white/40 text-sm font-mono uppercase tracking-widest max-w-xs leading-relaxed">
             © {new Date().getFullYear()} Native Creative Agency
           </p>
 
-          {/* Founder card — bottom right */}
-          <div className="flex items-center gap-4 bg-white rounded-2xl p-3 pr-5 shadow-2xl w-fit">
+          {/* Founder card — full width on mobile */}
+          <div className="flex items-center gap-4 bg-white rounded-2xl p-3 pr-5 shadow-2xl w-full md:w-fit">
             <img
               src="https://media.licdn.com/dms/image/v2/D4D03AQEFlMtC7gtzpw/profile-displayphoto-scale_200_200/B4DZolynQRGQAY-/0/1761570620869?e=1774483200&v=beta&t=bHFaiGa69H9UKJaPMBCmfHS2_ADOCphL6pWuBZjbAyg"
               alt="Francisco"

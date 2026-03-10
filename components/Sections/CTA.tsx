@@ -4,7 +4,7 @@ import Reveal from '../UI/Reveal';
 
 const CTA: React.FC = () => {
   return (
-    <section id="contact" className="relative overflow-hidden py-48">
+    <section id="contact" className="relative overflow-hidden py-24 md:py-48">
 
       {/* Video background */}
       <video
@@ -25,7 +25,7 @@ const CTA: React.FC = () => {
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 text-center">
         <Reveal width="100%">
-          <h2 className="text-6xl md:text-8xl lg:text-9xl font-display font-bold text-white tracking-tighter mb-12 leading-[0.9]">
+          <h2 className="text-4xl md:text-8xl lg:text-9xl font-display font-bold text-white tracking-tighter mb-8 md:mb-12 leading-[0.9]">
             PRONTO PARA <br />
             <span className="text-[#f3fc46]">DOMINAR O YOUTUBE?</span>
           </h2>
@@ -36,7 +36,7 @@ const CTA: React.FC = () => {
             <a
               href="https://calendar.app.google/AETzZfN5aFjXbGj38"
               target="_blank" rel="noopener noreferrer"
-              className="px-12 py-6 bg-[#f3fc46] text-black text-xl font-bold rounded-full hover:scale-105 transition-transform flex items-center gap-3 shadow-[0_0_40px_rgba(243,252,70,0.25)]"
+              className="w-full md:w-auto px-8 md:px-12 py-5 md:py-6 bg-[#f3fc46] text-black text-lg md:text-xl font-bold rounded-full hover:scale-105 transition-transform flex items-center justify-center gap-3 shadow-[0_0_40px_rgba(243,252,70,0.25)]"
             >
               Marcar Chamada de Descoberta
               <ArrowRight className="w-6 h-6" />

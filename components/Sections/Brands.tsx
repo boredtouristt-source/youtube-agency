@@ -3,7 +3,7 @@ import { CLIENT_LOGOS } from '../../constants';
 
 const Brands: React.FC = () => {
   return (
-    <section className="py-24 bg-white border-y border-zinc-100 overflow-hidden">
+    <section className="py-14 md:py-24 bg-white border-y border-zinc-100 overflow-hidden">
        <div className="container mx-auto px-6 mb-16 text-center">
           <h2 className="text-2xl md:text-3xl font-display font-bold text-black uppercase tracking-widest mb-4">
             Já trabalharam connosco

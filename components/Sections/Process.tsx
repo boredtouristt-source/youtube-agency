@@ -29,7 +29,7 @@ const Process: React.FC = () => {
         <div className="mb-24 text-center">
             <Reveal width="100%">
                 <div className="inline-block relative">
-                    <h2 className="text-6xl md:text-9xl font-display font-bold text-black tracking-tighter leading-[0.9] mb-4 relative z-10">
+                    <h2 className="text-4xl md:text-9xl font-display font-bold text-black tracking-tighter leading-[0.9] mb-4 relative z-10">
                     DA IDEIA AO <br /><span className="text-black bg-[#f3fc46] px-6 transform -skew-x-6 inline-block">CRESCIMENTO.</span>
                     </h2>
                 </div>

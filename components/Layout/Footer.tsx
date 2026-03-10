@@ -18,10 +18,6 @@ const Footer: React.FC = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center text-xs text-white/20 border-t border-white/10 pt-8 font-medium">
            <p>&copy; {new Date().getFullYear()} Native Creative Agency. Todos os direitos reservados.</p>
-           <div className="flex gap-6 mt-4 md:mt-0">
-              <a href="#" className="hover:text-white transition-colors">Política de Privacidade</a>
-              <a href="#" className="hover:text-white transition-colors">Termos de Serviço</a>
-           </div>
         </div>
       </div>
     </footer>

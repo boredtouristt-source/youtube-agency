@@ -1,13 +1,24 @@
-import React, { useState } from 'react';
-import { SERVICES_DATA } from '../../constants';
-import { ArrowUpRight } from 'lucide-react';
+import React from 'react';
 import Reveal from '../UI/Reveal';
 
-const Services: React.FC = () => {
-  const [activeService, setActiveService] = useState(SERVICES_DATA[0]);
+const APPROACH = [
+  {
+    title: "Estratégia",
+    items: ["Posicionamento do canal", "Formatos de conteúdo", "Análise de audiência"],
+  },
+  {
+    title: "Produção",
+    items: ["Vídeos longos", "Séries de YouTube", "Short form","Podcasts"],
+  },
+  {
+    title: "Distribuição",
+    items: ["Thumbnails", "Packaging", "Estratégia de algoritmo"],
+  },
+];
 
+const Services: React.FC = () => {
   return (
-    <section id="services" className="py-32 bg-black text-white relative overflow-hidden">
+    <section id="services" className="py-16 md:py-32 bg-black text-white relative overflow-hidden">
       
       {/* Background Noise/Texture */}
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-10"></div>
@@ -15,7 +26,7 @@ const Services: React.FC = () => {
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="mb-24">
           <Reveal width="100%">
-            <h2 className="text-5xl md:text-8xl font-display font-bold tracking-tighter leading-[0.9] mb-8">
+            <h2 className="text-4xl md:text-8xl font-display font-bold tracking-tighter leading-[0.9] mb-6">
               A NOSSA <br />
               <span className="text-[#f3fc46]">ABORDAGEM.</span>
             </h2>
@@ -25,63 +36,24 @@ const Services: React.FC = () => {
           </Reveal>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
-            
-            {/* Left Column: Interactive List */}
-            <div className="lg:w-1/2 flex flex-col gap-4">
-                {SERVICES_DATA.map((service, index) => (
-                    <Reveal key={service.id} width="100%" delay={index * 100}>
-                        <div 
-                            onMouseEnter={() => setActiveService(service)}
-                            className={`group cursor-pointer border-b border-zinc-800 pb-8 transition-all duration-300 ${activeService.id === service.id ? 'opacity-100 translate-x-4' : 'opacity-40 hover:opacity-100 hover:translate-x-2'}`}
-                        >
-                            <div className="flex items-baseline justify-between mb-2">
-                                <span className="font-mono text-[#f3fc46] text-sm">0{index + 1}</span>
-                                <ArrowUpRight className={`w-6 h-6 text-[#f3fc46] transition-transform duration-300 ${activeService.id === service.id ? 'opacity-100 translate-x-0 translate-y-0' : 'opacity-0 -translate-x-2 translate-y-2'}`} />
-                            </div>
-                            <h3 className="text-3xl md:text-5xl font-display font-bold mb-2 group-hover:text-white transition-colors">
-                                {service.title}
-                            </h3>
-                            <p className={`text-zinc-400 font-medium max-w-md transition-all duration-500 overflow-hidden ${activeService.id === service.id ? 'max-h-24 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
-                                {service.description}
-                            </p>
-                        </div>
-                    </Reveal>
-                ))}
-            </div>
-
-            {/* Right Column: Sticky Visual */}
-            <div className="lg:w-1/2 hidden lg:block relative">
-                <Reveal delay={300} className="sticky top-32 w-full">
-                    <div className="w-full aspect-square rounded-[3rem] overflow-hidden border border-zinc-800 bg-zinc-900 shadow-2xl transition-all duration-500">
-                        {/* Image Display */}
-                        <img 
-                            key={activeService.id}
-                            src={activeService.image} 
-                            alt={activeService.title} 
-                            className="w-full h-full object-cover opacity-60 animate-in fade-in zoom-in duration-500"
-                        />
-                        
-                        {/* Overlay Information */}
-                        <div className="absolute inset-0 flex flex-col justify-end p-12 bg-gradient-to-t from-black via-black/50 to-transparent">
-                            <div className="bg-[#f3fc46] text-black self-start px-4 py-1 rounded-full font-bold text-xs uppercase tracking-wide mb-4 shadow-lg">
-                                Abordagem Ativa
-                            </div>
-                            <h4 className="text-4xl font-display font-bold text-white mb-4">
-                                {activeService.title}
-                            </h4>
-                            <div className="flex gap-3">
-                                {activeService.tags.map(tag => (
-                                    <span key={tag} className="px-4 py-2 border border-white/20 rounded-full text-xs font-bold uppercase tracking-wider text-white backdrop-blur-md">
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </Reveal>
-            </div>
-
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
+          {APPROACH.map((col, i) => (
+            <Reveal key={col.title} delay={i * 150 as 0 | 100 | 200 | 300 | 400} width="100%">
+              <div>
+                <h3 className="text-2xl md:text-3xl font-display font-bold text-white mb-6">
+                  {col.title}
+                </h3>
+                <ul className="flex flex-col gap-4">
+                  {col.items.map((item) => (
+                    <li key={item} className="flex items-center gap-3 text-zinc-400 text-lg font-medium">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#f3fc46] flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>
