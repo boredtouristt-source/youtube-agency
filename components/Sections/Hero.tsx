@@ -105,7 +105,7 @@ const Hero: React.FC = () => {
           {/* Founder card — full width on mobile */}
           <div className="flex items-center gap-4 bg-white rounded-2xl p-3 pr-5 shadow-2xl w-full md:w-fit">
             <img
-              src="https://media.licdn.com/dms/image/v2/D4D03AQEFlMtC7gtzpw/profile-displayphoto-scale_200_200/B4DZolynQRGQAY-/0/1761570620869?e=1774483200&v=beta&t=bHFaiGa69H9UKJaPMBCmfHS2_ADOCphL6pWuBZjbAyg"
+              src="https://prifvutxutzcspiukzek.supabase.co/storage/v1/object/public/nothing1/1.jpeg"
               alt="Francisco"
               className="w-14 h-14 rounded-xl object-cover flex-shrink-0"
             />
