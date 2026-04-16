@@ -6,21 +6,21 @@ const TEAM = [
     name: "Francisco Albuquerque",
     role: "Co-Fundador",
     description: "Visão estratégica e direção criativa. Co-criador do projecto Andamente, com mais de 300 mil seguidores nas redes sociais.",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQEFlMtC7gtzpw/profile-displayphoto-scale_200_200/B4DZolynQRGQAY-/0/1761570620869?e=1774483200&v=beta&t=bHFaiGa69H9UKJaPMBCmfHS2_ADOCphL6pWuBZjbAyg",
+    image: "https://prifvutxutzcspiukzek.supabase.co/storage/v1/object/public/nothing1/1.jpeg",
     initial: "F",
   },
   {
     name: "João Garcia",
     role: "Co-Fundador",
     description: "Responsável por toda a operação. Da logística às finanças, garante que a máquina nunca para.",
-    image: "https://media.licdn.com/dms/image/v2/C4D03AQGBn-mC52TP8Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1662031022384?e=1774483200&v=beta&t=tYGqaej-WFF4mg46Vp_KNgto-4F3L3GRJ12krW2XQzU",
+    image: "https://prifvutxutzcspiukzek.supabase.co/storage/v1/object/public/nothing1/3.jpeg",
     initial: "JG",
   },
   {
     name: "Fábio Domingues",
     role: "Videografia",
     description: "Por detrás da câmara em cada produção. O olho que tudo vê.",
-    image: "https://media.licdn.com/dms/image/v2/C4D03AQFUta52lRKq4w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1604523290185?e=1774483200&v=beta&t=et7wG-Jq2dIQar-PiQkGhRzuQzsx-4KtSleUfA1AjnY",
+    image: "https://prifvutxutzcspiukzek.supabase.co/storage/v1/object/public/nothing1/4.jpeg",
     initial: "FD",
   },
   {
@@ -34,7 +34,7 @@ const TEAM = [
     name: "Raquel Nogueira",
     role: "Marketing",
     description: "A mente por detrás da distribuição e do crescimento orgânico.",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQHzD0fWAhU1zw/profile-displayphoto-shrink_200_200/B4DZWrbapBH4AY-/0/1742337846826?e=1774483200&v=beta&t=pTeOt2isxTCWzD_kjcwqZ_gQfSgSQiyZstCLBL4gA84",
+    image: "https://prifvutxutzcspiukzek.supabase.co/storage/v1/object/public/nothing1/2.jpeg",
     initial: "R",
   },
 ];
